@@ -1,6 +1,4 @@
 import { ApolloClient, InMemoryCache } from "@apollo/client";
-import Head from "next/head";
-import Header from "../components/Header/Header";
 import PostItem from "../components/PostItem/PostItem";
 import { GET_ALL_POSTS } from "../graphql/queries";
 
@@ -10,7 +8,11 @@ export default function Home({ posts }) {
       <main>
         {posts.map((post, i) => {
           return (
-            <PostItem title={post.attributes.title } key={i} />
+            <PostItem
+              title={post.attributes.title}
+              slug={post.attributes.urlSlug}
+              key={i}
+            />
           );
         })}
       </main>

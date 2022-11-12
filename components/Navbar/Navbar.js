@@ -6,9 +6,9 @@ const NavBar = () => {
     <nav className={styles.navbar}>
       <h2>lucasneves</h2>
       <ul>
-        <Link href="/">Home</Link>
-        <Link href="/posts">Posts</Link>
-        <Link href="/contact">Contact</Link>
+        <Link href="/">home</Link>
+        <Link href="/posts">posts</Link>
+        <Link href="/contact">contact</Link>
       </ul>
     </nav>
   );

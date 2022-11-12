@@ -1,10 +1,12 @@
 import styles from "./PostItem.module.css";
-
-const PostItem = ({ title }) => {
+import Link from "next/link";
+const PostItem = ({ title, slug }) => {
   return (
-    <div className={styles["post-item"]}>
-      <h3>{title}</h3>
-    </div>
+    <Link href={`/post/${slug}`}>
+      <div className={styles["post-item"]}>
+        <h3>{title}</h3>
+      </div>
+    </Link>
   );
 };
 

@@ -1,5 +1,5 @@
 .wrapper {
   max-width: 960px;
   margin: 0 auto;
-  padding: 30px 15px;
+  padding: calc(30px * 3) 15px;
 }
