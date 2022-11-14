@@ -11,6 +11,7 @@ export default function Home({ posts }) {
             <PostItem
               title={post.attributes.title}
               slug={post.attributes.urlSlug}
+              description={post.attributes.description}
               key={i}
             />
           );

@@ -1,9 +1,10 @@
 .post-item {
   margin-bottom: 100px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #666;
+  border-bottom: 5px solid #212121;
 }
 
 .post-item h3 {
   font-size: 50px;
+  margin-bottom: 25px;
 }
