@@ -3,6 +3,7 @@ import Head from "next/head";
 import { GET_ALL_SLUGS, GET_INDIVIDUAL_POST } from "../../graphql/queries";
 import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote } from 'next-mdx-remote';
+import styles from './post.module.css';
 
 const client = new ApolloClient({
   uri: "http://localhost:1337/graphql",
@@ -11,10 +12,10 @@ const client = new ApolloClient({
 
 const PostDetail = ({ post }) => {
   return (
-    <>
-      <h2>{ post.title }</h2>
-      <MDXRemote {...post.content} />
-    </>
+    <article className={styles['post']}>
+      <h2 className={styles['post-title']}>{ post.title }</h2>
+      <MDXRemote className={styles['post-mdx']} {...post.content} />
+    </article>
   );
 };
 
